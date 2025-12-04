@@ -1,0 +1,12 @@
+{
+  "name": "special-potato",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "npm run build && node dist/tests.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

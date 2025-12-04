@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SLAE Educational Solver</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background: #f7f7f7; }
+    h1 { margin-bottom: 0; }
+    .panel { background: #fff; padding: 15px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-bottom: 12px; }
+    label { display: block; margin-top: 8px; }
+    input[type="number"] { width: 80px; }
+    table.matrix-table { border-collapse: collapse; margin-top: 10px; }
+    table.matrix-table td { border: 1px solid #ddd; padding: 4px; }
+    table.matrix-table input { width: 70px; }
+    #resultArea { margin-top: 10px; }
+    .error { color: #b30000; }
+    .success { color: #006400; }
+    .info { color: #003366; }
+    .controls { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  </style>
+</head>
+<body>
+  <h1>SLAE Solver</h1>
+  <p>An educational tool for solving A·X = B with classical numerical methods.</p>
+
+  <div class="panel">
+    <div class="controls">
+      <label>Method:
+        <select id="methodSelect">
+          <option value="cramer">Cramer</option>
+          <option value="gauss">Gauss (Elimination)</option>
+          <option value="gaussJordan">Gauss–Jordan</option>
+          <option value="seidel">Gauss–Seidel (Iterative)</option>
+          <option value="jacobi">Jacobi (Iterative)</option>
+        </select>
+      </label>
+      <label>n (size): <input type="number" id="sizeInput" value="3" min="1" /></label>
+      <button id="buildBtn">Build grid</button>
+      <label>Tolerance: <input type="number" step="any" id="toleranceInput" value="1e-6" /></label>
+      <label>Max iterations: <input type="number" id="iterationInput" value="1000" /></label>
+      <label>Load from file: <input type="file" id="fileInput" accept=".txt" /></label>
+      <button id="solveBtn">Solve</button>
+      <button id="verifyBtn">Verify solution</button>
+    </div>
+    <div id="matrixContainer"></div>
+  </div>
+
+  <div class="panel" id="resultArea">
+    <p>Enter data and choose a method to see the solution here.</p>
+  </div>
+
+  <script type="module" src="./dist/ui.js"></script>
+</body>
+</html>
