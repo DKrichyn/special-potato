@@ -1,0 +1,18 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-weight: 700;
+}
+
+.input {
+  padding: 8px;
+}
+
+.helper {
+  color: #4b5563;
+  font-size: 14px;
+}

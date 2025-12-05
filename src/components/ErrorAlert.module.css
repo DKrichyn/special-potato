@@ -1,0 +1,17 @@
+.alert {
+  border: 1px solid #fca5a5;
+  background: #fef2f2;
+  color: #991b1b;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.title {
+  margin: 0 0 6px;
+  font-weight: 700;
+}
+
+.list {
+  margin: 0;
+  padding-left: 18px;
+}
