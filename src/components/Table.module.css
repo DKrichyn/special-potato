@@ -1,0 +1,27 @@
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+
+.headerCell {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f3f4f6;
+  font-weight: 600;
+}
+
+.cell {
+  padding: 10px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.row:nth-child(even) {
+  background: #f9fafb;
+}
+
+.numeric {
+  text-align: right;
+}

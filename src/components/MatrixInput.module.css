@@ -1,0 +1,124 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+}
+
+.label {
+  font-weight: 600;
+  color: #111827;
+}
+
+.matrixShell {
+  position: relative;
+  padding: 10px 16px;
+  display: inline-block;
+  background: #f9fafb;
+  border-radius: 6px;
+}
+
+.matrixShell::before,
+.matrixShell::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border: 2px solid #111827;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 6px;
+}
+
+.matrixShell::before {
+  left: 6px;
+}
+
+.matrixShell::after {
+  right: 6px;
+}
+
+.matrixGrid {
+  display: grid;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.input {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  min-width: 48px;
+}
+
+.matrixContainer {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.vectorWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: fit-content;
+}
+
+.vectorLabel {
+  font-weight: 600;
+  color: #111827;
+}
+
+.vectorShell {
+  position: relative;
+  padding: 10px 14px;
+  background: #f9fafb;
+  border-radius: 6px;
+  display: inline-flex;
+}
+
+.vectorShell::before,
+.vectorShell::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  width: 4px;
+  border: 2px solid #111827;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 6px;
+}
+
+.vectorShell::before {
+  left: 6px;
+}
+
+.vectorShell::after {
+  right: 6px;
+}
+
+.vectorColumn {
+  display: grid;
+  grid-auto-rows: minmax(40px, auto);
+  gap: 8px;
+}
+
+.vectorInput {
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  text-align: center;
+  background: #fff;
+  min-width: 56px;
+}
+
+@media (max-width: 640px) {
+  .matrixContainer {
+    flex-direction: column;
+  }
+}
